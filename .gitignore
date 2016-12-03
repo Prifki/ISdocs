@@ -1,0 +1,15 @@
+# exclude everything
+/*
+/*/
+
+# allow www
+!/www/
+/www/lib/
+
+# allow extra files
+!README.md
+!.gitignore
+
+
+
+

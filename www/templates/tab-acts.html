@@ -1,0 +1,211 @@
+﻿<ion-view view-title="Нормативные документы">
+    <ion-content overflow-scroll="false">
+        <div class="item-divider" ng-click="fz_showing(fz_hid)">
+            <h3 class="item-icon-right">Федеральные законы
+            <i ng-class="{'ion-arrow-up-b':fz_hid == 0, 'ion-arrow-down-b':fz_hid == 1}"></i></h3>
+        </div>
+        <div ng-class="{hidden:fz_hid == 1}">
+        <div class="item item-divider">
+            Государственная тайна
+        </div>
+        <ion-list>
+            <ion-item class="item-icon-right text-left" ng-repeat="gt_fz in gt_fzs" type="item-text-wrap"  ng-click="view_link(gt_fz.link)">
+                <h2>{{gt_fz.name}}</h2>
+                <p>{{gt_fz.date}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+        <div class="item item-divider">
+            Персональные данные
+        </div>
+        <ion-list>
+            <ion-item class="item-icon-right text-left" ng-repeat="pd_fz in pd_fzs" type="item-text-wrap" ng-click="view_link(pd_fz.link)">
+                <h2>{{pd_fz.name}}</h2>
+                <p>{{pd_fz.date}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+        <div class="item item-divider">
+            Коммерческая тайна
+        </div>
+        <ion-list>
+            <ion-item class="item-icon-right text-left" ng-repeat="fz_kt in fz_kts" type="item-text-wrap" ng-click="view_link(fz_kt.link)">
+                <h2>{{fz_kt.name}}</h2>
+                <p>{{fz_kt.date}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+        <div class="item item-divider">
+            Доктрина информационной безопасности
+        </div>
+        <ion-list>
+            <ion-item class="item-icon-right text-left" ng-repeat="fz_d in fz_ds" type="item-text-wrap" ng-click="view_link(fz_d.link)">
+                <h2>{{fz_d.name}}</h2>
+                <p>{{fz_d.date}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+        <div class="item item-divider">
+            Защита информации
+        </div>
+        <ion-list>
+            <ion-item class="item-icon-right text-left" ng-repeat="fz_ob in fz_obs" type="item-text-wrap" ng-click="view_link(fz_ob.link)">
+                <h2>{{fz_ob.name}}</h2>
+                <p>{{fz_ob.date}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+        </div>
+
+        <div class="item-divider" ng-click="up_showing(up_hid)">
+            <h3 class="item-icon-right">
+                Указы президента
+                <i ng-class="{'ion-arrow-up-b':up_hid == 0, 'ion-arrow-down-b':up_hid == 1}"></i>
+            </h3>
+        </div>
+        <div ng-class="{hidden:up_hid == 1}">
+            <div class="item item-divider">
+                Государственная тайна
+            </div>
+            <ion-list>
+                <ion-item class="item-icon-right text-left" ng-repeat="gt_up in gt_ups" type="item-text-wrap" ng-click="view_link(gt_up.link)">
+                    <h2>{{gt_up.name}}</h2>
+                    <p>{{gt_up.date}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+            </ion-list>
+            <div class="item item-divider">
+                Персональные данные
+            </div>
+            <ion-list>
+                <ion-item class="item-icon-right text-left" ng-repeat="pd_up in pd_ups" type="item-text-wrap" ng-click="view_link(pd_up.link)">
+                    <h2>{{pd_up.name}}</h2>
+                    <p>{{pd_up.date}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+            </ion-list>
+            <div class="item item-divider">
+                Конфиденциальная информация
+            </div>
+            <ion-list>
+                <ion-item class="item-icon-right text-left" ng-repeat="up_ki in up_kis" type="item-text-wrap" ng-click="view_link(up_ki.link)">
+                    <h2>{{up_ki.name}}</h2>
+                    <p>{{up_ki.date}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+            </ion-list>
+
+            <div class="item item-divider">
+                Защита информации
+            </div>
+            <ion-list>
+                <ion-item class="item-icon-right text-left" ng-repeat="up_ob in up_obs" type="item-text-wrap" ng-click="view_link(up_ob.link)">
+                    <h2>{{up_ob.name}}</h2>
+                    <p>{{up_ob.date}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+            </ion-list>
+            </div>
+
+        <div class="item-divider" ng-click="pp_showing(pp_hid)">
+            <h3 class="item-icon-right">
+                Постановления правительства
+                <i ng-class="{'ion-arrow-up-b':pp_hid == 0, 'ion-arrow-down-b':pp_hid == 1}"></i>
+            </h3>
+        </div>
+        <div ng-class="{hidden:pp_hid == 1}">
+            <div class="item item-divider">
+                Государственная тайна
+            </div>
+            <ion-list>
+                <ion-item class="item-icon-right text-left" ng-repeat="gt_pp in gt_pps" type="item-text-wrap" ng-click="view_link(gt_pp.link)">
+                    <h2>{{gt_pp.name}}</h2>
+                    <p>{{gt_pp.date}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+            </ion-list>
+            <div class="item item-divider">
+                Конфиденциальная информация
+            </div>
+            <ion-list>
+                <ion-item class="item-icon-right text-left" ng-repeat="pp_ki in pp_kis" type="item-text-wrap" ng-click="view_link(pp_ki.link)">
+                    <h2>{{pp_ki.name}}</h2>
+                    <p>{{pp_ki.date}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+            </ion-list>
+            <div class="item item-divider">
+                Персональные данные
+            </div>
+            <ion-list>
+                <ion-item class="item-icon-right text-left" ng-repeat="pd_pp in pd_pps" type="item-text-wrap" ng-click="view_link(pd_pp.link)">
+                    <h2>{{pd_pp.name}}</h2>
+                    <p>{{pd_pp.date}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+            </ion-list>
+            <div class="item item-divider">
+                Служебная тайна
+            </div>
+            <ion-list>
+                <ion-item class="item-icon-right text-left" ng-repeat="pp_st in pp_sts" type="item-text-wrap" ng-click="view_link(pp_st.link)">
+                    <h2>{{pp_st.name}}</h2>
+                    <p>{{pp_st.date}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+            </ion-list>
+            <div class="item item-divider">
+                Защита информации
+            </div>
+            <ion-list>
+                <ion-item class="item-icon-right text-left" ng-repeat="pp_ob in pp_obs" type="item-text-wrap" ng-click="view_link(pp_ob.link)">
+                    <h2>{{pp_ob.name}}</h2>
+                    <p>{{pp_ob.date}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+            </ion-list>
+            </div>
+
+        <div class="item-divider" ng-click="o_showing(o_hid)">
+            <h3 class="item-icon-right">
+                Документы уполномоченных федеральных органов
+                <i ng-class="{'ion-arrow-up-b':o_hid == 0, 'ion-arrow-down-b':o_hid == 1}"></i>
+            </h3>
+        </div>
+        <div ng-class="{hidden:o_hid == 1}">
+            <div class="item item-divider">
+                Конфиденциальная информация
+            </div>
+            <ion-list>
+                <ion-item class="item-icon-right text-left" ng-repeat="o_ki in o_kis" type="item-text-wrap" ng-click="view_link(o_ki.link)">
+                    <h2>{{o_ki.name}}</h2>
+                    <p>{{o_ki.org}}</p>
+                    <p>{{o_ki.date}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+            </ion-list>
+            <div class="item item-divider">
+                Персональные данные
+            </div>
+            <ion-list>
+                <ion-item class="item-icon-right text-left" ng-repeat="pd_o in pd_os" type="item-text-wrap" ng-click="view_link(pd_o.link)">
+                    <h2>{{pd_o.name}}</h2>
+                    <p>{{pd_o.org}}</p>
+                    <p>{{pd_o.date}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+            </ion-list>
+            <div class="item item-divider">
+                Защита информации
+            </div>
+            <ion-list>
+                <ion-item class="item-icon-right text-left" ng-repeat="o_ob in o_obs" type="item-text-wrap" ng-click="view_link(o_ob.link)">
+                    <h2>{{o_ob.name}}</h2>
+                    <p>{{o_ob.org}}</p>
+                    <p>{{o_ob.date}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+            </ion-list>
+            </div>
+</ion-content>
+</ion-view>

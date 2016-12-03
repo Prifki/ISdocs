@@ -1,0 +1,52 @@
+﻿<ion-view view-title="Руководящие документы">
+  <ion-content overflow-scroll="false">
+      <div class="item-divider" ng-click="rd_showing(rd_hid)">
+          <h3 class="item-icon-right">
+              Руководящие документы
+              <i ng-class="{'ion-arrow-up-b':rd_hid == 0, 'ion-arrow-down-b':rd_hid == 1}"></i>
+          </h3>
+      </div>
+      <div ng-class="{hidden:rd_hid == 1}">
+          <ion-list>
+              <ion-item class="item-icon-right text-left" ng-repeat="rd_rd in rd_rds" type="item-text-wrap" ng-click="view_link(rd_rd.link)">
+                  <h2>{{rd_rd.name}}</h2>
+                  <h3>{{rd_rd.org}}</h3>
+                  <p>{{rd_rd.date}}</p>
+                  <i class="icon ion-chevron-right icon-accessory"></i>
+              </ion-item>
+          </ion-list>
+      </div>
+      <div class="item-divider" ng-click="tr_showing(tr_hid)">
+          <h3 class="item-icon-right">
+              Требования и рекомендации
+              <i ng-class="{'ion-arrow-up-b':tr_hid == 0, 'ion-arrow-down-b':tr_hid == 1}"></i>
+          </h3>
+      </div>
+      <div ng-class="{hidden:tr_hid == 1}">
+          <ion-list>
+              <ion-item class="item-icon-right text-left" ng-repeat="rd_tr in rd_trs" type="item-text-wrap" ng-click="view_link(rd_tr.link)">
+                  <h2>{{rd_tr.name}}</h2>
+                  <h3>{{rd_tr.org}}</h3>
+                  <p>{{rd_tr.date}}</p>
+                  <i class="icon ion-chevron-right icon-accessory"></i>
+              </ion-item>
+          </ion-list>
+       </div>
+      <div class="item-divider" ng-click="nm_showing(nm_hid)">
+          <h3 class="item-icon-right">
+              Нормативно-методические документы
+              <i ng-class="{'ion-arrow-up-b':nm_hid == 0, 'ion-arrow-down-b':nm_hid == 1}"></i>
+          </h3>
+      </div>
+      <div ng-class="{hidden:nm_hid == 1}">
+          <ion-list>
+              <ion-item class="item-icon-right text-left" ng-repeat="rd_nm in rd_nms" type="item-text-wrap" ng-click="view_link(rd_nm.link)">
+                  <h2>{{rd_nm.name}}</h2>
+                  <h3>{{rd_nm.org}}</h3>
+                  <p>{{rd_nm.date}}</p>
+                  <i class="icon ion-chevron-right icon-accessory"></i>
+              </ion-item>
+          </ion-list>
+      </div>
+</ion-content>
+</ion-view>
