@@ -1,0 +1,9 @@
+﻿/* Empty. Add your own CSS if you like */
+
+div.item-divider h3 {
+    padding-left: 16px;
+}
+
+.hidden {
+    display:none;
+}

@@ -1,15 +1,11 @@
-# exclude everything
-/*
-/*/
-
-# allow www
-!/www/
-/www/lib/
-
-# allow extra files
-!README.md
-!.gitignore
-
-
-
-
+# exclude everything except 
+    /*
+    !/www
+    /www/*
+    !/www/css/app.css
+    !/www/img
+    !/www/js
+    !/www/templates
+    !/www/config.xml
+    !/www/index.html
+    !/README.md

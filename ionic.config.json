@@ -1,0 +1,10 @@
+{
+  "name": "com.milkmushrooms.InformationSecurity",
+  "app_id": "",
+  "gulpDependantTasks": [
+    "sass"
+  ],
+  "gulpStartupTasks": [
+    "watch"
+  ]
+}
